@@ -1,22 +1,31 @@
 
-function adicionarTarefa(){
+function adicionarTarefa() {
 
-    let mensagem = "Tarefa adicionada com sucesso!";
-    document.getElementById("mensagem").textContent = mensagem;
-    
-    let inputTarefa = document.getElementById("inputTarefa")
-    let tarefa = inputTarefa.value
-    
-    let listaTarefas = document.getElementById("listaTarefas")
-    let novaTarefa =document.createElement("li")
+    const inputTarefa = document.getElementById("inputTarefa")
+    let tarefa = inputTarefa.value.trim()
+    const mensagem = document.getElementById("mensagem")
 
-    novaTarefa.textContent = tarefa
+    if (tarefa == "") {
+        let mensagemErro = "Digite uma tarefa para adicioná-la à sua lista!";
+        mensagem.textContent = mensagemErro;
+        mensagem.style.color = 'red'
 
-    listaTarefas.appendChild(novaTarefa)
+
+    } else {
+
+        let listaTarefas = document.getElementById("listaTarefas")
+        let novaTarefa = document.createElement("li")
+
+        novaTarefa.textContent = tarefa
+
+        listaTarefas.appendChild(novaTarefa)
+        let mensagemSucesso = "Tarefa adicionada com sucesso!";
+        mensagem.textContent = mensagemSucesso;
+        mensagem.style.color = 'green'
+        document.querySelector("mensagens")
+    }
 
     inputTarefa.value = ""
 
-
-    
 }
 
