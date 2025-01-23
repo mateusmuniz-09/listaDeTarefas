@@ -94,7 +94,7 @@ input ::placeholder{
         transition: background-color 0.3s ease;
     }
     .adicionar-tarefas:hover {
-        background-color: #d8d3c7; /* Cor mais escura no hover */
+        background-color: #b31111; /* Cor mais escura no hover */
     }
     ul{
         display: flex;

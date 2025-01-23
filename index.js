@@ -6,13 +6,12 @@ function adicionarTarefa() {
     const mensagem = document.getElementById("mensagem")
 
     if (tarefa == "") {
+
         let mensagemErro = "Digite uma tarefa para adicioná-la à sua lista!";
         mensagem.textContent = mensagemErro;
         mensagem.style.color = 'red'
 
-
     } else {
-
         let listaTarefas = document.getElementById("listaTarefas")
         let novaTarefa = document.createElement("li")
 
@@ -22,7 +21,7 @@ function adicionarTarefa() {
         let mensagemSucesso = "Tarefa adicionada com sucesso!";
         mensagem.textContent = mensagemSucesso;
         mensagem.style.color = 'green'
-        document.querySelector("mensagens")
+
     }
 
     inputTarefa.value = ""
