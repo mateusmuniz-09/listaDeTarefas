@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
 * {
+    font-family: poppins , sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,12 +22,12 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.container {
+.div-container {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 24px;
-    background-color: #D2B48C	;
+    background-color: #D2B48C;
     width: 50%;
     height: 300px;
     padding-top: 24px;
@@ -42,108 +47,168 @@ body {
     height: 100%;
 }
 
-h1{
+h1 {
     font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 32px;
     border-bottom: solid 0.5px #000000;
     color: #800000;
 
 }
-.input-inserir-tarefas{
+
+.input-inserir-tarefas {
     width: 60%;
     height: 40px;
     border-radius: 5px;
     border: none;
     padding: 8px;
     font-size: 1rem;
-    border: solid 1px #800000 ;
+    border: solid 1px #800000;
     background-color: #f7f4f3;
 
     color: #000000;
 
 }
+
 input:focus {
-    outline: none; 
-    border-color: #A0522D; 
-    box-shadow: 0 0 5px rgba(180, 173, 168, 0.5); 
+    outline: none;
+    border-color: #A0522D;
+    box-shadow: 0 0 5px rgba(180, 173, 168, 0.5);
 }
-input ::placeholder{
+
+input ::placeholder {
     color: #000000;
 }
-.lista-tarefas{
+
+.lista-tarefas {
 
     margin-top: 34px;
     width: 100%;
     height: auto;
     gap: 24px;
-    padding: 34px;
+    padding: 34px 0;
     border-top: solid 0.5px #000000;
+
+
 }
 
-.adicionar-tarefas{
-        background-color: #800000;
-        color: #ffffff;
-        height: 50px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
+.adicionar-tarefas {
+    background-color: #800000;
+    color: #ffffff;
+    height: 50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.adicionar-tarefas:hover {
+    background-color: #b31111;
+    /* Cor mais escura no hover */
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    direction: none;
+    gap: 10px;
+    align-items: center;
+
+}
+
+li {
+    list-style: none;
+    width: 50%;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.mensagens {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.novaTarefa{
+
+display: flex;
+justify-content:center;
+padding: 0 15px;
+
+}
+.conatiner{
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+
+}
+.conatiner button{
+    padding: 0px 5px;
+    border-radius: 8px;
+    font-size: 12px;
+    border: none;
+    background-color: #800000;
+    color: #fff;
+}
+
+
+@media (max-width:768px) {
+    body {
         font-size: 16px;
-        cursor: pointer;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.3s ease;
-    }
-    .adicionar-tarefas:hover {
-        background-color: #b31111; /* Cor mais escura no hover */
-    }
-    ul{
-        display: flex;
-        flex-direction: column;
-        direction: none;
-        gap: 10px;
-        align-items: center;
-
+        margin: 10px;
     }
 
-    li{
-        list-style: none;
-        width: 60%;
+    .div-container {
+        width: 100%;
+    }
+    .container{
+        width : 100%
+    }
+
+    .input-inserir-tarefas {
+        width: 90%;
         height: 40px;
+        border-radius: 5px;
+        border: none;
+        padding: 8px;
+        font-size: 1rem;
+
+    }
+
+    li {
+        list-style: none;
+        width: 90%;
+        height: 30px;
         background-color: #ffffff;
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        font-size: 20px;
-       
+        font-size: 15px;
+        font-weight: 600;
+    
+    }
+    
+    .mensagens {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    
+    .conatiner button{
+       width: 60px;
+       font-size: 10px;
+       padding: 0 5px;
     }
 
-    .mensagens{
-    font-size: 20px;
-    font-weight: 400;
-    }
-    .mensagens.show{
-        color: #28a745;
-        }
-    @media (max-width:768px){
-        body {
-            font-size: 16px;
-            margin: 10px;
-          }
-          .container{
-            width: 95%;
-          }
-          .input-inserir-tarefas{
-            width: 90%;
-            height: 40px;
-            border-radius: 5px;
-            border: none;
-            padding: 8px;
-            font-size: 1rem;
-        
-        }
 
-
-
-    }
+}
